@@ -18,7 +18,7 @@ class BasicSwitchBreaksTest extends BaseIOTest {
     void mainPrintsDefault() {
         BasicSwitchBreaks.main(null);
 
-        assertOutEquals("20\n");
+        assertOutEquals("twenty\n");
     }
 
     @Test
