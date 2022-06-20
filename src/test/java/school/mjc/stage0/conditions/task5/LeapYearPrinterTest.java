@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class LeapYearPrinterTest extends BaseIOTest {
 
     @Test
-    void isLeapYearPrintsLeapWhenTrue() {
+    void isLeapYearPrintsLeapWhen2004() {
         LeapYearPrinter leapPrinter = new LeapYearPrinter();
 
         leapPrinter.isLeapYear(2004);
@@ -15,11 +15,21 @@ class LeapYearPrinterTest extends BaseIOTest {
     }
 
     @Test
-    void isLeapYearPrintsNotLeapWhenFalse() {
+    void isLeapYearPrintsNotLeapWhen2000() {
         LeapYearPrinter leapPrinter = new LeapYearPrinter();
 
         leapPrinter.isLeapYear(2000);
 
-        assertOutEquals("not leap\n");
+        assertOutEquals("leap\n");
+    }
+    
+    
+    @Test
+    void isLeapYearPrintsNotLeapWhen1900() {
+        LeapYearPrinter leapPrinter = new LeapYearPrinter();
+
+        leapPrinter.isLeapYear(1900);
+
+        assertOutEquals("leap\n");
     }
 }
